@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="make-function"></p>
+    <button onclick="handleClick()">Just Function</button>
+    <button id="event-listener">Direct add Event Listener</button>
+
+    <script>
+      function handleClick() {
+        const p = document.getElementById("make-function");
+        p.innerText = "Hello Programmer how are you!!";
+        document.body.style.backgroundColor = "yellow";
+      }
+
+      document
+        .getElementById("event-listener")
+        .addEventListener("click", function () {
+          const p = document.getElementById("make-function");
+          p.innerText = "Hi there Iam Rasel Alam Jubayed!!";
+          document.body.style.backgroundColor = "lightblue";
+        });
+    </script>
+  </body>
+</html>

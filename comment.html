@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commnet</title>
+  </head>
+  <body>
+    <h1>Hello Commnet User</h1>
+    <h4>Your commnets</h4>
+    <section>
+      <div id="commnet-container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ducimus
+          pariatur corporis voluptas cupiditate totam velit ipsum voluptatibus?
+          Sed, nisi! Esse hic veritatis ea accusantium quam nemo fugit delectus.
+          Earum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quod
+          obcaecati expedita sequi sapiente ipsam, porro placeat ipsa est
+          consectetur atque. Corporis placeat explicabo ex impedit officiis
+          inventore harum repellat?
+        </p>
+      </div>
+      <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br />
+        <button id="button-comment">Post</button>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("button-comment")
+        .addEventListener("click", function () {
+          const commnetBox = document.getElementById("new-commnet");
+
+          const commentBox = document.getElementById("new-comment");
+
+          const newComment = document.createElement("p");
+          newComment.innerText = commentBox.value;
+
+          const commentContainer = document.getElementById("commnet-container");
+          commentContainer.appendChild(newComment);
+
+          commentBox.value = "";
+        });
+    </script>
+  </body>
+</html>
